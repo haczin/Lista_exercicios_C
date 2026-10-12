@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int ehPrimo(int n) {
+    if (n < 2) {
+        return 0;
+    }
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            return 0;   
+        }
+    }
+    return 1;
+}
+
+int main() {
+    int numero;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (ehPrimo(numero)) {
+        printf("%d e primo.\n", numero);
+    } else {
+        printf("%d nao e primo.\n", numero);
+    }
+
+    return 0;
+}
